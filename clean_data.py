@@ -48,4 +48,4 @@ for index, row in data.iterrows():
         np.round(convert_temperature(data['AverageTemperatureUncertaintyCelsius'][index], 'F', 'C'), 3)
 
 # save cleaned dataframe to a csv file
-data.to_csv('data/temperature_clean.csv', sep='\t', encoding='utf-8')
+data.to_csv('data/temperature_clean.csv', sep=',', encoding='utf-8')
