@@ -28,6 +28,9 @@ ax.set_xticks(minor_x_ticks, minor=True)
 ax.set_yticks(major_y_ticks)
 ax.set_yticks(minor_y_ticks, minor=True)
 
+ax.tick_params(axis='x', colors='grey')
+ax.tick_params(axis='y', colors='grey')
+
 plt.ylabel('AverageTemperatureCelsius')
 plt.xlabel('year')
 plt.tight_layout()
