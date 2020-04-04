@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-data = pd.read_csv("data/temperature_clean.csv")
+data = pd.read_csv("data/temperatures_clean.csv")
 years = np.asarray(data['year'])
 average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
 del data

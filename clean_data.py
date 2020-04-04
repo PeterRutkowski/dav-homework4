@@ -3,7 +3,7 @@ import numpy as np
 from scipy.constants import convert_temperature
 
 # import data
-data = pd.read_csv('data/temperature.csv')
+data = pd.read_csv('data/temperatures.csv')
 
 # delete day column
 data = data.drop('day', axis=1)
@@ -48,4 +48,4 @@ for index, row in data.iterrows():
         np.round(convert_temperature(data['AverageTemperatureUncertaintyCelsius'][index], 'F', 'C'), 3)
 
 # save cleaned dataframe to a csv file
-data.to_csv('data/temperature_clean.csv', sep=',', encoding='utf-8')
+data.to_csv('data/temperatures_clean.csv', sep=',', encoding='utf-8')
