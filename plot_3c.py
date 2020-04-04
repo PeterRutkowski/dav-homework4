@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from matplotlib import cm
 
 def prepare_data():
     data = pd.read_csv("data/temperatures_clean.csv")
@@ -40,7 +39,7 @@ def plot(average_temp_celsius, countries):
     major_y_ticks = np.arange(-10, 32, 10)
     minor_y_ticks = np.arange(-15, 32, 5)
 
-    ax.set_facecolor((0.88, 0.88, 0.88))
+    ax.set_facecolor((0.88,0.88,0.88))
     ax.set_xlim(0.5, 8.5)
     ax.set_ylim(-18, 32)
     ax.spines['top'].set_visible(False)
@@ -56,24 +55,11 @@ def plot(average_temp_celsius, countries):
     ax.tick_params(axis='y', colors='grey', which='minor')
     ax.grid(True, zorder=0, color='white', which='minor', linewidth=0.4)
     ax.grid(True, zorder=0, color='white', which='major', linewidth=1)
+    ax.set_axisbelow(True)
 
-    ax.boxplot(average_temp_celsius, labels=countries, zorder=3, patch_artist=True,
-               boxprops=dict(facecolor='none', color='black'), capprops=dict(color='black'),
-               whiskerprops=dict(color='black'),
-               flierprops=dict(markerfacecolor='black', markeredgecolor='black', markersize=3),
-               medianprops=dict(color='black'),)
+    ax.violinplot(average_temp_celsius, showmeans=False, showmedians=False, showextrema=False, widths=0.8)
 
-    scatter_distribution = []
-    for i in range(len(average_temp_celsius)):
-        scatter = []
-        for j in range(len(average_temp_celsius[i])):
-            scatter.append(np.random.uniform(i + 1 - 0.28, i + 1 + 0.28))
-        scatter_distribution.append(scatter)
-
-    for x, y in zip(scatter_distribution, average_temp_celsius):
-        plt.scatter(x, y, c='orange', alpha=0.1, zorder=3, s=5)
-
-    plt.savefig('plots/3b.png', dpi=200)
+    plt.savefig('plots/3c.png', dpi=200)
     plt.clf()
 
 countries, average_temp_celsius = prepare_data()
