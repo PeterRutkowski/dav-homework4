@@ -8,7 +8,8 @@ average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
 del data
 
 fig, ax = plt.subplots()
-fig = plt.scatter(years, average_temp_celsius, alpha=0.15, edgecolor=((0, 0, 0, 1)), facecolors=((0, 0, 0, 1)), s=5, zorder=3)
+fig = plt.scatter(years, average_temp_celsius, alpha=0.15, edgecolor=((0, 0, 0, 1)),
+                  facecolors=((0, 0, 0, 1)), s=5, zorder=3)
 
 ax.set_facecolor((0.88,0.88,0.88))
 ax.set_ylim(-18, 32)
