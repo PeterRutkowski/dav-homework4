@@ -13,19 +13,26 @@ The data: http://bioinformatics.netmark.pl/teaching/dav_20/labs/lab6/temperature
 ================================================
 
 Task 1: Data cleaning and preparing for plotting
+
 a) there are missing values for City and Country in some records, remove those
+
 b) there are NA’s in AverageTemperatureFahr and AverageTemperatureUncertaintyFahr, 
 remove rows with missing values in those fields
+
 c) remove empty 'City' and 'Country' fields
+
 d) 'day' field has no other values besides 1, thus you can remove it from the data
+
 e) convert AverageTemperatureFahr and AverageTemperatureUncertaintyFahr into 
 AverageTemperatureCelsius and AverageTemperatureUncertaintyCelsius 
 (you can drop '*Fahr' columns)
+
 f) save new csv file with cleaned data (e.g. temperatures_clean.csv)
 
 ================================================
 
 Task 2: Scatter plot
+
 a) first plot all AverageTemperatureCelsius vs. year
 The result should look like:
 http://bioinformatics.netmark.pl/teaching/dav_20/labs/lab6/fig1.png
@@ -53,6 +60,7 @@ Summary: this did not help to much, we move to another plot type and look more d
 ================================================
 
 Task 3: Box plots
+
 a) visualising the distribution of temperatures within each country
 
 The result should look like:
@@ -74,7 +82,6 @@ For instance, if there is a bimodal distribution, this would not be observed
 with a boxplot. An alternative is a violin plot, where the shape 
 (of the density of points) is drawn.
 
-================================================
 ================================================
 
 After the exercise you should have:
