@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7bd0db6-0b13-437a-a2e4-d0ee1db62a68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
@@ -24,6 +23,16 @@
                 <element signature="e#328#1207#0" />
                 <element signature="e#87#1096#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-1359" />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -79,6 +88,11 @@
             <path>
               <item name="mimuw_2019s_dav_hw4" type="b2602c69:ProjectViewProjectNode" />
               <item name="mimuw_2019s_dav_hw4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mimuw_2019s_dav_hw4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mimuw_2019s_dav_hw4" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,6 +410,17 @@
             <element signature="e#328#1207#0" />
             <element signature="e#87#1096#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/fig7.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1359" />
+          <second_editor />
         </state>
       </provider>
     </entry>
