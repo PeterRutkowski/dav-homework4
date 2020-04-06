@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from sys import argv
 
 def import_data_2():
     data = pd.read_csv("data/temperatures_clean.csv")
@@ -97,4 +98,10 @@ def plot_axes_3():
     return fig, ax
 
 def save_plot(filename):
-    plt.savefig('plots/' + filename + '.png', dpi=200)
+    if len(argv) > 1:
+        if argv[1] == '0':
+            plt.show()
+        else:
+            plt.savefig('plots/' + filename + '.png', dpi=200)
+    else:
+        plt.savefig('plots/' + filename + '.png', dpi=200)
