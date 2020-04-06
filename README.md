@@ -90,3 +90,123 @@ After the exercise you should have:
 - (at least) 7 plots in png files produced by python scripts
 
 Note: you need to use python, but you do not need limit yourself to matplotlib
+
+================================================
+
+Exercise 7
+
+
+The continuation of temperature plots. Thus you should already have 
+scripts and  plots from Tasks 1-3
+
+
+The data: http://bioinformatics.netmark.pl/teaching/dav_20/labs/lab6/temperatures.csv
+
+================================================
+
+Task 4: Time series
+a) calculate average temperature per year per each country 
+- in this part, you need to group data by year and country 
+- then calculate mean for each group
+- do line plot with years on x axis and temperature on y axis
+
+The result should look like: fig7.png
+
+Summary: the plot is quite unreadable
+
+b) to avoid too much of information split graphed data by Country
+
+The result should look like: fig8.png
+
+Summary: better
+
+c) and add color
+
+The result should look like: fig9.png
+
+Summary: you start to see anything
+
+================================================
+
+Task 5: Grouping multiple subplots
+a) make one (!) plot containing multiple subplots
+
+The result should look like: fig10.png
+
+
+b) split line in each subplot by city of each country
+
+The result should look like: fig11.png
+
+c) clean background 
+
+Frequently, plotting libraries by default adds a grey grid. While
+it may look nice at first glance, but, for print and better 
+clarity, it is wise to reverse the grid coloring
+
+The result should look like: fig12.png
+
+
+d) divide into cities
+
+As we gain some space by dividing the data into subplots, we can
+use it to show more data. For each subplot/country add lines for 
+individual data. You can have one legend or multiple legends 
+(separate for each subplot). Mark the cities in different colors.
+
+The result should look like: fig13.png
+
+e) change labels, add title, customize fonts, rotate elements, etc.
+
+The result should look like: fig14.png, fig15.png
+
+Note: you need to use python, but you do not need limit yourself to matplotlib
+
+================================================
+================================================
+
+Homework:
+
+Prepare the homework as a project directory with lab6 & lab7 exercises. 
+
+It should contain:
+- the main report file in PDF (with all the plots embedded)* 
+- the python scripts generating plots (one script per one plot)**
+- separate plots
+
+*  no python code in the report file
+** plain python plots (*.py)- thus no jupyter notebooks
+
+For instance: task2a.py, task2b.py, ...
+Additionally, the script should one parameter [0/1] for showing or saving the plot.
+For instance typing in the terminal: 
+python task2a.py 0      [will show the plot in interactive mode, plt.show()]
+python task2a.py 1      [will store the plot in the file and print the path to the file]
+
+Requred scripts/plots: 
+task2a, task2b, task2c, task2d, 
+task3a, task3b, task3c,
+task4a, task4b, task4c,
+task5a, task5b, task5c, task5d, task5e (one final plot)
+
+As you can see there will be (at least) 12 scripts and 12 plots. Many scripts will 
+share code, thus it might be worth moving some redundant code to separate *.py 
+module (e.g. utils.py). 
+Additionally, organise the project directory into subdirectories
+e.g. ./images ./scripts ./data, etc.
+
+All files should be sent until 19.04.2020
+via email to lukaskoz@mimuw.edu.pl with the email subject:
+'lab7_hw_Name_Surname' without email text body and with 
+'lab7_hw_Name_Surname.7z' (ASCII letters only) attachment.
+
+(thus no 'lab7_Małgorzata_Łóżyńska', should be 'lab7_Malgorzata_Luzynska')
+
+All emails with a different structure (the one that will not go through email filter to 
+the proper email folder dedicated for home works) will be scored -10% 
+
+Using non-English labels, legends, descriptions, etc. will be scored -10%
+
+Additionally, all problems with the structure of the plot e.g. the plot size,  
+labels font size, etc. will also affect the grading. You need to follow advice included
+in the lectures.
