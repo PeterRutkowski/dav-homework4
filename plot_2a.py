@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import import_AvTempCelsius, save_plot
+from utils import import_data_2, save_plot
 
-years, average_temp_celsius = import_AvTempCelsius()
+years, average_temp_celsius = import_data_2()
 
 plt.scatter(years, average_temp_celsius, edgecolor=((0, 0, 0, 1)), facecolors='none')
 

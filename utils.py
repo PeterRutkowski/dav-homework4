@@ -2,52 +2,51 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def import_AvTempCelsius():
+def import_data_2():
     data = pd.read_csv("data/temperatures_clean.csv")
     years = np.asarray(data['year'])
     average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
     return years, average_temp_celsius
 
-def plot_background(x_low, x_up, y_low, y_up):
+def import_data_3():
+    data = pd.read_csv("data/temperatures_clean.csv")
+    countries = np.asarray(data['country_id'])
+    average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
+
+    country_codes = ['BRA', 'FRA', 'JAP', 'NEW', 'POL', 'SOU', 'SWE', 'UKR']
+
+    temp_indices = []
+    for i in range(len(country_codes)):
+        temp_indices.append([])
+    for i in range(len(countries)):
+        for j in range(len(country_codes)):
+            if countries[i] == country_codes[j]:
+                temp_indices[j].append(i)
+
+    average_temp_celsius_split = []
+    for i in range(len(temp_indices)):
+        temp_single_country = []
+        for j in range(len(temp_indices[i])):
+            temp_single_country.append(average_temp_celsius[temp_indices[i][j]])
+        average_temp_celsius_split.append(temp_single_country)
+
+    return country_codes, average_temp_celsius_split
+
+def plot_axes_2():
     fig, ax = plt.subplots()
 
     ax.set_facecolor((0.88, 0.88, 0.88))
-    ax.set_ylim(y_low, y_up)
-    ax.set_xlim(x_low, x_up)
+    ax.set_ylim(-18, 32)
+    ax.set_xlim(1730, 2025)
     ax.spines['top'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
 
-    x_lower_bound_major = x_low
-    x_lower_bound_minor = x_low
-    for i in range(100):
-        if (x_lower_bound_major + i)%100 == 0:
-            x_lower_bound_major = x_lower_bound_major + i
-            break
-    for i in range(50):
-        if (x_lower_bound_minor + i)%50 == 0:
-            x_lower_bound_minor = x_lower_bound_minor + i
-            break
-
-    y_lower_bound_major = y_low
-    y_lower_bound_minor = y_low
-    for i in range(10):
-        if (y_lower_bound_major + i)%10 == 0:
-            y_lower_bound_major = y_lower_bound_major + i
-            break
-    for i in range(5):
-        if (y_lower_bound_minor + i)%5 == 0:
-            y_lower_bound_minor = y_lower_bound_minor + i
-            break
-
-    print(x_lower_bound_minor)
-    print(x_lower_bound_major)
-
-    major_x_ticks = np.arange(x_lower_bound_major, x_up, 100)
-    minor_x_ticks = np.arange(x_lower_bound_minor, x_up, 50)
-    major_y_ticks = np.arange(y_lower_bound_major, y_up, 10)
-    minor_y_ticks = np.arange(y_lower_bound_minor, y_up, 5)
+    major_x_ticks = np.arange(1800, 2025, 100)
+    minor_x_ticks = np.arange(1750, 2025, 50)
+    major_y_ticks = np.arange(-10, 32, 10)
+    minor_y_ticks = np.arange(-15, 32, 5)
 
     ax.set_xticks(major_x_ticks)
     ax.set_xticks(minor_x_ticks, minor=True)
@@ -63,6 +62,37 @@ def plot_background(x_low, x_up, y_low, y_up):
     plt.grid(True, zorder=0, color='white')
     ax.grid(True, zorder=0, color='white', which='minor', linewidth=0.4)
     ax.grid(True, zorder=0, color='white', which='major', linewidth=1)
+
+    return fig, ax
+
+def plot_axes_3():
+    fig, ax = plt.subplots()
+
+    ax.set_facecolor((0.88, 0.88, 0.88))
+    ax.set_xlim(0.5, 8.5)
+    ax.set_ylim(-18, 32)
+    ax.spines['top'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+
+    major_y_ticks = np.arange(-10, 32, 10)
+    minor_y_ticks = np.arange(-15, 32, 5)
+
+    ax.set_yticks(major_y_ticks)
+    ax.set_yticks(minor_y_ticks, minor=True)
+
+    ax.tick_params(axis='x', colors='grey')
+    ax.tick_params(axis='y', colors='grey')
+    ax.tick_params(axis='y', colors='grey', which='minor')
+
+    plt.ylabel('AverageTemperatureCelsius')
+    plt.xlabel('country_id')
+    plt.tight_layout()
+    plt.grid(True, zorder=0, color='white')
+    ax.grid(True, zorder=0, color='white', which='minor', linewidth=0.4)
+    ax.grid(True, zorder=0, color='white', which='major', linewidth=1)
+    ax.set_axisbelow(True)
 
     return fig, ax
 
