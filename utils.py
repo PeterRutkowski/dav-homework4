@@ -166,7 +166,7 @@ def import_data_4a():
     possible_years = np.arange(min_year, max_year+1,1)
     # lists for storing final results
     final_years, final_averages = [], []
-
+    # ignore years that have no data
     for i in range(len(averages_split)):
         clean_years, clean_averages = [], []
         for j in range(len(averages_split[i])):
@@ -175,8 +175,6 @@ def import_data_4a():
                 clean_averages.append(averages_split[i][j])
         final_years.append(clean_years)
         final_averages.append(clean_averages)
-
-    print(np.shape(final_years), np.shape(final_averages))
 
     return final_years, final_averages
 
