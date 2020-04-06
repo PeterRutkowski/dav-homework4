@@ -1,7 +1,7 @@
-from utils import import_data_4a, plot_axes_4, save_plot
+from utils import import_data_4, plot_axes_4, save_plot
 import matplotlib.pyplot as plt
 
-years, averages = import_data_4a()
+years, averages = import_data_4()
 
 fig, ax = plot_axes_4()
 

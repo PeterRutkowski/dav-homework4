@@ -130,7 +130,7 @@ def plot_axes_4():
 
     return fig, ax
 
-def import_data_4a():
+def import_data_4():
     data = pd.read_csv("data/temperatures_clean.csv")
     years = np.asarray(data['year'])
     countries = np.asarray(data['country_id'])
