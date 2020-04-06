@@ -121,7 +121,7 @@ def plot_axes_4():
     ax.tick_params(axis='x', colors='grey')
     ax.tick_params(axis='y', colors='grey')
 
-    plt.ylabel('AverageTemperatureCelsius')
+    plt.ylabel('countryAverage')
     plt.xlabel('year')
     plt.tight_layout()
     plt.grid(True, zorder=0, color='white')
