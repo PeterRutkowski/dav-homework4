@@ -33,6 +33,40 @@ def import_data_3():
 
     return country_codes, average_temp_celsius_split
 
+def import_data_4():
+    data = pd.read_csv("data/temperatures_clean.csv")
+    years = np.asarray(data['year'])
+    countries = np.asarray(data['country_id'])
+    average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
+
+    country_codes = ['BRA', 'FRA', 'JAP', 'NEW', 'POL', 'SOU', 'SWE', 'UKR']
+
+    min_year = np.min(years)
+    max_year = np.max(years)
+    no_years = max_year - min_year + 1
+    no_countries = len(country_codes)
+
+    # create template years/countries
+    split = []
+    for i in range(no_years):
+        split.append([])
+        for j in range(no_countries):
+            split[i].append([])
+    # fill in template with data corresponding to years/countries
+    for i in range(len(years)):
+        for j in range(no_years):
+            if years[i] == j + min_year:
+                for k in range(no_countries):
+                    if countries[i] == country_codes[k]:
+                        split[j][k].append(average_temp_celsius[i])
+    # calculate final averages in the template
+    for i in range(no_years):
+        for j in range(no_countries):
+            if len(split[i][j]) > 0:
+                split[i][j] = [np.average(split[i][j])]
+
+    return split
+
 def plot_axes_2():
     fig, ax = plt.subplots()
 
@@ -129,40 +163,6 @@ def plot_axes_4():
     ax.grid(True, zorder=0, color='white', which='major', linewidth=1)
 
     return fig, ax
-
-def import_data_4():
-    data = pd.read_csv("data/temperatures_clean.csv")
-    years = np.asarray(data['year'])
-    countries = np.asarray(data['country_id'])
-    average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
-
-    country_codes = ['BRA', 'FRA', 'JAP', 'NEW', 'POL', 'SOU', 'SWE', 'UKR']
-
-    min_year = np.min(years)
-    max_year = np.max(years)
-    no_years = max_year - min_year + 1
-    no_countries = len(country_codes)
-
-    # create template years/countries
-    split = []
-    for i in range(no_years):
-        split.append([])
-        for j in range(no_countries):
-            split[i].append([])
-    # fill in template with data corresponding to years/countries
-    for i in range(len(years)):
-        for j in range(no_years):
-            if years[i] == j + min_year:
-                for k in range(no_countries):
-                    if countries[i] == country_codes[k]:
-                        split[j][k].append(average_temp_celsius[i])
-    # calculate final averages in the template
-    for i in range(no_years):
-        for j in range(no_countries):
-            if len(split[i][j]) > 0:
-                split[i][j] = [np.average(split[i][j])]
-
-    return split
 
 def save_plot(filename):
     if len(argv) > 1:
