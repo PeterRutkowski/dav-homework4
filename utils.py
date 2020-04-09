@@ -141,42 +141,28 @@ def import_data_4():
     min_year = np.min(years)
     max_year = np.max(years)
     no_years = max_year - min_year + 1
+    no_countries = len(country_codes)
 
-    country_split, averages_split = [], []
-    # create template for plugging in averages
-    for i in range(len(country_codes)):
-        country_split.append([])
-        averages_split.append([])
+    # create template years/countries
+    split = []
+    for i in range(no_years):
+        split.append([])
+        for j in range(no_countries):
+            split[i].append([])
+    # fill in template with data corresponding to years/countries
+    for i in range(len(years)):
         for j in range(no_years):
-            country_split[i].append([])
-            averages_split[i].append([])
-    # plug in avarages to the template
-    for i in range(len(countries)):
-        for j in range(len(country_codes)):
-            if countries[i] == country_codes[j]:
-                country_split[j][years[i]-min_year].append(average_temp_celsius[i])
-    # calculate avarages of plugged in data in the template
-    for i in range(len(country_split)):
-        for j in range(len(country_split[i])):
-            if len(country_split[i][j]) > 0:
-                averages_split[i][j] = np.average(country_split[i][j])
-            else:
-                averages_split[i][j] = 100
-    # list of all years between min_year and max_year
-    possible_years = np.arange(min_year, max_year+1,1)
-    # lists for storing final results
-    final_years, final_averages = [], []
-    # ignore years that have no data
-    for i in range(len(averages_split)):
-        clean_years, clean_averages = [], []
-        for j in range(len(averages_split[i])):
-            if averages_split[i][j] != 100:
-                clean_years.append(possible_years[j])
-                clean_averages.append(averages_split[i][j])
-        final_years.append(clean_years)
-        final_averages.append(clean_averages)
+            if years[i] == j + min_year:
+                for k in range(no_countries):
+                    if countries[i] == country_codes[k]:
+                        split[j][k].append(average_temp_celsius[i])
+    # calculate final averages in the template
+    for i in range(no_years):
+        for j in range(no_countries):
+            if len(split[i][j]) > 0:
+                split[i][j] = [np.average(split[i][j])]
 
-    return final_years, final_averages
+    return split
 
 def save_plot(filename):
     if len(argv) > 1:
