@@ -2,7 +2,6 @@ from utils import import_data_4, plot_axes_4, save_plot
 import numpy as np
 
 data = import_data_4()
-
 years, averages = [], []
 for i in range(len(data)):
     for j in range(len(data[0])):

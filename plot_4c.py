@@ -1,7 +1,17 @@
 from utils import import_data_4, plot_axes_4, save_plot
 import matplotlib.pyplot as plt
 
-years, averages = import_data_4()
+data = import_data_4()
+years, averages = [], []
+for i in range(8):
+    years.append([])
+    averages.append([])
+
+for i in range(len(data)):
+    for j in range(len(data[0])):
+        if len(data[i][j]) > 0:
+            years[j].append(1743+i)
+            averages[j].append(data[i][j])
 
 fig, ax = plot_axes_4()
 
@@ -15,4 +25,3 @@ plt.subplots_adjust(right=0.76)
 plt.legend(bbox_to_anchor=(1.,0.5), loc='center left', frameon=False, title='Country')
 
 save_plot('4c')
-
