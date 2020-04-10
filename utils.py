@@ -67,6 +67,49 @@ def import_data_4():
 
     return split
 
+def import_cities():
+    data = pd.read_csv("data/temperatures_clean.csv")
+    years = np.asarray(data['year'])
+    countries = np.asarray(data['country_id'])
+    cities = np.asarray(data['City'])
+    average_temp_celsius = np.asarray(data['AverageTemperatureCelsius'])
+
+    country_codes = ['BRA', 'FRA', 'JAP', 'NEW', 'POL', 'SOU', 'SWE', 'UKR']
+    city_codes = [['Brasília','Canoas'],['Paris','Marseille'],['Tokyo','Tottori'],
+                  ['Auckland','Hamilton'],['Warsaw','Wroclaw'],['Cape Town','Johannesburg'],
+                  ['Stockholm','Uppsala'],['Kiev','Lvov','Odesa','Kherson']]
+
+    min_year = np.min(years)
+    max_year = np.max(years)
+    no_years = max_year - min_year + 1
+    no_countries = len(country_codes)
+
+    # create template years/countries
+    split = []
+    for i in range(no_years):
+        split.append([])
+        for j in range(no_countries):
+            split[i].append([])
+            for k in range(len(city_codes[j])):
+                split[i][j].append([])
+    # fill in template with data corresponding to years/countries
+    for i in range(len(years)):
+        for j in range(no_years):
+            if years[i] == j + min_year:
+                for k in range(no_countries):
+                    if countries[i] == country_codes[k]:
+                        for l in range(len(city_codes[k])):
+                            if cities[i] == city_codes[k][l]:
+                                split[j][k][l].append(average_temp_celsius[i])
+    # calculate final averages in the template
+    for i in range(no_years):
+        for j in range(no_countries):
+            for k in range(len(city_codes[j])):
+                if len(split[i][j][k]) > 0:
+                    split[i][j][k] = [np.average(split[i][j][k])]
+
+    return split
+
 def plot_axes_2():
     fig, ax = plt.subplots()
 

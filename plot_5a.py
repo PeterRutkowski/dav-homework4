@@ -34,10 +34,10 @@ plot7 = ax[2,0].plot(years[6], averages[6], linewidth=1.2, label=country_codes[6
 plot8 = ax[2,1].plot(years[7], averages[7], linewidth=1.2, label=country_codes[7], color=colors[7])
 
 def background(ax, label, xticks=0, yticks=0):
-    ax.set_title(label)
+    ax.set_title(label, size=10)
 
     ax.set_facecolor((0.88, 0.88, 0.88))
-    ax.set_ylim(-5, 22)
+    ax.set_ylim(-5, 23)
     ax.set_xlim(1730, 2025)
     ax.spines['top'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
@@ -46,23 +46,31 @@ def background(ax, label, xticks=0, yticks=0):
 
     major_x_ticks = np.arange(1800, 2025, 100)
     minor_x_ticks = np.arange(1750, 2025, 50)
-    major_y_ticks = np.arange(0, 22, 5)
-    minor_y_ticks = np.arange(-5, 22, 2.5)
+    major_y_ticks = np.arange(0, 23, 5)
+    minor_y_ticks = np.arange(-5, 23, 2.5)
 
     ax.set_xticks(major_x_ticks)
     ax.set_xticks(minor_x_ticks, minor=True)
     ax.set_yticks(major_y_ticks)
     ax.set_yticks(minor_y_ticks, minor=True)
 
-    ax.tick_params(axis='x', colors='grey')
-    ax.tick_params(axis='y', colors='grey')
-    plt.grid(True, zorder=0, color='white')
-    ax.grid(True, zorder=0, color='white', which='minor', linewidth=0.4)
-    ax.grid(True, zorder=0, color='white', which='major', linewidth=1)
+    ax.tick_params(axis='x', which='major', colors='grey', labelsize=8.0, length=3.0)
+    ax.tick_params(axis='x', which='minor', colors='grey', labelsize=8.0, length=0)
+    ax.tick_params(axis='y', which='major', colors='grey', labelsize=8.0, length=3.0)
+    ax.tick_params(axis='y', which='minor', colors='grey', labelsize=8.0, length=0)
+
+    ax.grid(True, zorder=0, color='white', which='minor', linewidth=0.3)
+    ax.grid(True, zorder=0, color='white', which='major', linewidth=0.8)
+
     if xticks == 0:
-        ax.set_xticks([])
+        ax.set_xticklabels([])
+        ax.tick_params(axis='x', which='major', colors='grey', labelsize=8.0, length=0)
+        ax.tick_params(axis='x', which='minor', colors='grey', labelsize=8.0, length=0)
+
     if yticks == 0:
-        ax.set_yticks([])
+        ax.set_yticklabels([])
+        ax.tick_params(axis='y', which='major', colors='grey', labelsize=8.0, length=0)
+        ax.tick_params(axis='y', which='minor', colors='grey', labelsize=8.0, length=0)
 
 background(ax[0,0], country_codes[0], yticks=1)
 background(ax[0,1], country_codes[1])
