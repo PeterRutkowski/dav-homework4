@@ -213,5 +213,7 @@ def save_plot(filename):
             plt.show()
         else:
             plt.savefig('plots/' + filename + '.png', dpi=200)
+            print('plots/' + filename + '.png')
     else:
         plt.savefig('plots/' + filename + '.png', dpi=200)
+        print('plots/' + filename + '.png')
