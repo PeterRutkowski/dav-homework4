@@ -4,7 +4,7 @@ import numpy as np
 
 data = import_cities()
 
-country_codes = ['BRA', 'FRA', 'JAP', 'NEW', 'POL', 'SOU', 'SWE', 'UKR']
+country_codes = ['Brazil', 'France', 'Japan', 'New Zealand', 'Poland', 'South Africa', 'Sweden', 'Ukraine']
 city_codes = [['Brasília','Canoas'],['Paris','Marseille'],['Tokyo','Tottori'],
               ['Auckland','Hamilton'],['Warsaw','Wroclaw'],['Cape Town','Johannesburg'],
               ['Stockholm','Uppsala'],['Kiev','Lvov','Odesa','Kherson']]
@@ -52,9 +52,9 @@ plot83 = ax[2,1].plot(years[7][2], averages[7][2], linewidth=1.2, label=city_cod
 plot84 = ax[2,1].plot(years[7][3], averages[7][3], linewidth=1.2, label=city_codes[7][3], color=colors[7])
 
 def background(ax, label, xticks=0, yticks=0):
-    ax.set_title(label)
+    ax.set_title(label, size=10)
 
-    ax.set_ylim(-7, 23)
+    ax.set_ylim(-7, 25)
     ax.set_xlim(1730, 2025)
     ax.spines['top'].set_visible(True)
     ax.spines['bottom'].set_visible(True)
@@ -67,31 +67,31 @@ def background(ax, label, xticks=0, yticks=0):
 
     major_x_ticks = np.arange(1800, 2025, 100)
     minor_x_ticks = np.arange(1750, 2025, 50)
-    major_y_ticks = np.arange(-5, 23, 5)
-    minor_y_ticks = np.arange(-5, 23, 2.5)
+    major_y_ticks = np.arange(-5, 25, 5)
+    minor_y_ticks = np.arange(-5, 25, 2.5)
 
     ax.set_xticks(major_x_ticks)
     ax.set_xticks(minor_x_ticks, minor=True)
     ax.set_yticks(major_y_ticks)
     ax.set_yticks(minor_y_ticks, minor=True)
 
-    ax.tick_params(axis='x', which='major', colors='grey', labelsize=8.0, length=3.0)
-    ax.tick_params(axis='x', which='minor', colors='grey', labelsize=8.0, length=0)
-    ax.tick_params(axis='y', which='major', colors='grey', labelsize=8.0, length=3.0)
-    ax.tick_params(axis='y', which='minor', colors='grey', labelsize=8.0, length=0)
+    ax.tick_params(axis='x', which='major', colors='black', labelsize=8.0, length=3.0)
+    ax.tick_params(axis='x', which='minor', colors='black', labelsize=8.0, length=0)
+    ax.tick_params(axis='y', which='major', colors='black', labelsize=8.0, length=3.0)
+    ax.tick_params(axis='y', which='minor', colors='black', labelsize=8.0, length=0)
 
-    ax.grid(True, zorder=0, color='white', which='minor', linewidth=0.1)
-    ax.grid(True, zorder=0, color='white', which='major', linewidth=0.5)
+    ax.grid(True, zorder=0, color=(0.88,0.88,0.88), which='minor', linewidth=0.1)
+    ax.grid(True, zorder=0, color=(0.88,0.88,0.88), which='major', linewidth=0.5)
 
     if xticks == 0:
         ax.set_xticklabels([])
-        ax.tick_params(axis='x', which='major', colors='grey', labelsize=8.0, length=0)
-        ax.tick_params(axis='x', which='minor', colors='grey', labelsize=8.0, length=0)
+        ax.tick_params(axis='x', which='major', colors='black', labelsize=8.0, length=0)
+        ax.tick_params(axis='x', which='minor', colors='black', labelsize=8.0, length=0)
 
     if yticks == 0:
         ax.set_yticklabels([])
-        ax.tick_params(axis='y', which='major', colors='grey', labelsize=8.0, length=0)
-        ax.tick_params(axis='y', which='minor', colors='grey', labelsize=8.0, length=0)
+        ax.tick_params(axis='y', which='major', colors='black', labelsize=8.0, length=0)
+        ax.tick_params(axis='y', which='minor', colors='black', labelsize=8.0, length=0)
 
 background(ax[0,0], country_codes[0], yticks=1)
 background(ax[0,1], country_codes[1])
@@ -110,12 +110,11 @@ ax[2,2].grid(False)
 ax[2,2].set_xticks([])
 ax[2,2].set_yticks([])
 
-
 plt.tight_layout()
 plt.subplots_adjust(right=0.75)
 
 plots = plot11+plot21+plot31+plot41+plot51+plot61+plot71+plot81
 labels = country_codes
-plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country')
+plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country', prop={'size': 10})
 
 save_plot('5c')

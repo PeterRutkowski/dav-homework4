@@ -107,12 +107,11 @@ ax[2,2].grid(False)
 ax[2,2].set_xticks([])
 ax[2,2].set_yticks([])
 
-
 plt.tight_layout()
 plt.subplots_adjust(right=0.75)
 
 plots = plot11+plot21+plot31+plot41+plot51+plot61+plot71+plot81
 labels = country_codes
-plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country')
+plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country', prop={'size': 10})
 
 save_plot('5b')

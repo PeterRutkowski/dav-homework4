@@ -4,8 +4,9 @@
     <list default="true" id="d7bd0db6-0b13-437a-a2e4-d0ee1db62a68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_5a.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_5a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/5a.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/5a.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_5b.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_5b.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_5c.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_5c.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/5c.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/5c.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.plot_5b">
+  <component name="RunManager" selected="Python.plot_5c">
     <configuration name="plot_4a" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mimuw_2019s_dav_hw4" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,9 +143,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot_5c" />
         <item itemvalue="Python.plot_5b" />
         <item itemvalue="Python.plot_5a" />
-        <item itemvalue="Python.plot_5c" />
         <item itemvalue="Python.plot_4c" />
         <item itemvalue="Python.plot_4a" />
       </list>
@@ -164,22 +165,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="220" key="GridCell.Tab.0.bottom" timestamp="1586548434365">
+    <state width="1419" height="220" key="GridCell.Tab.0.bottom" timestamp="1586549615832">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586548434365" />
-    <state width="1419" height="220" key="GridCell.Tab.0.center" timestamp="1586548434363">
+    <state width="1419" height="220" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586549615832" />
+    <state width="1419" height="220" key="GridCell.Tab.0.center" timestamp="1586549615830">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586548434363" />
-    <state width="1419" height="220" key="GridCell.Tab.0.left" timestamp="1586548434362">
+    <state width="1419" height="220" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586549615830" />
+    <state width="1419" height="220" key="GridCell.Tab.0.left" timestamp="1586549615819">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586548434362" />
-    <state width="1419" height="220" key="GridCell.Tab.0.right" timestamp="1586548434364">
+    <state width="1419" height="220" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586549615819" />
+    <state width="1419" height="220" key="GridCell.Tab.0.right" timestamp="1586549615831">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586548434364" />
+    <state width="1419" height="220" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586549615831" />
     <state x="377" y="32" key="SettingsEditor" timestamp="1586454398238">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

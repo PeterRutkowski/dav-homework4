@@ -94,6 +94,6 @@ plt.subplots_adjust(right=0.75)
 
 plots = plot1+plot2+plot3+plot4+plot5+plot6+plot7+plot8
 labels = [plot.get_label() for plot in plots]
-plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country')
+plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country', prop={'size': 10})
 
 save_plot('5a')
