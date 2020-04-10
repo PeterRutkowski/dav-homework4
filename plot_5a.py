@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 from utils import import_data_4, save_plot
 import numpy as np
 
-
 data = import_data_4()
 years, averages = [], []
 for i in range(8):
@@ -16,24 +15,23 @@ for i in range(len(data)):
             averages[j].append(data[i][j])
 
 country_codes = ['Brazil', 'France', 'Japan', 'New Zealand', 'Poland', 'South Africa', 'Sweden', 'Ukraine']
-colors = [(1,0,0), (1,0,1), (0,1,0), (0,0,1), (1,1,0), (0,1,1), (0,0,0), (1,0.5,0)]
+colors = [(1,0,0), (1,0,1), (0.5,0.5,0.5), (0.5,0.1,0.5), (0.4,0,1), (0,0.7,1), (0,0,0), (1,0.5,0)]
 
 fig, ax = plt.subplots(3, 3)
-ax[-1, 0].set_xlabel('', color=(0, 0, 0, 0))
-ax[-1, 0].set_ylabel('', color=(0, 0, 0, 0))
-fig.text(0.5, 0.04, 'year', va='center', ha='center')
-fig.text(0.02, 0.5, 'countryAverage', va='center', ha='center', rotation='vertical')
 
+ax[-1, 0].set_xlabel('.', color=(0, 0, 0, 0))
+ax[-1, 0].set_ylabel('.', color=(0, 0, 0, 0))
+fig.text(0.42, 0.04, 'year', va='center', ha='center')
+fig.text(0.04, 0.5, 'countryAverage', va='center', ha='center', rotation='vertical')
 
-ax[0,0].plot(years[0], averages[0], linewidth=1.2, label=country_codes[0], color=colors[0])
-ax[0,1].plot(years[1], averages[1], linewidth=1.2, label=country_codes[1], color=colors[1])
-ax[0,2].plot(years[2], averages[2], linewidth=1.2, label=country_codes[2], color=colors[2])
-ax[1,0].plot(years[3], averages[3], linewidth=1.2, label=country_codes[3], color=colors[3])
-ax[1,1].plot(years[4], averages[4], linewidth=1.2, label=country_codes[4], color=colors[4])
-ax[1,2].plot(years[5], averages[5], linewidth=1.2, label=country_codes[5], color=colors[5])
-ax[2,0].plot(years[6], averages[6], linewidth=1.2, label=country_codes[6], color=colors[6])
-ax[2,1].plot(years[7], averages[7], linewidth=1.2, label=country_codes[7], color=colors[7])
-
+plot1 = ax[0,0].plot(years[0], averages[0], linewidth=1.2, label=country_codes[0], color=colors[0])
+plot2 = ax[0,1].plot(years[1], averages[1], linewidth=1.2, label=country_codes[1], color=colors[1])
+plot3 = ax[0,2].plot(years[2], averages[2], linewidth=1.2, label=country_codes[2], color=colors[2])
+plot4 = ax[1,0].plot(years[3], averages[3], linewidth=1.2, label=country_codes[3], color=colors[3])
+plot5 = ax[1,1].plot(years[4], averages[4], linewidth=1.2, label=country_codes[4], color=colors[4])
+plot6 = ax[1,2].plot(years[5], averages[5], linewidth=1.2, label=country_codes[5], color=colors[5])
+plot7 = ax[2,0].plot(years[6], averages[6], linewidth=1.2, label=country_codes[6], color=colors[6])
+plot8 = ax[2,1].plot(years[7], averages[7], linewidth=1.2, label=country_codes[7], color=colors[7])
 
 def background(ax, label, xticks=0, yticks=0):
     ax.set_title(label)
@@ -66,8 +64,6 @@ def background(ax, label, xticks=0, yticks=0):
     if yticks == 0:
         ax.set_yticks([])
 
-
-
 background(ax[0,0], country_codes[0], yticks=1)
 background(ax[0,1], country_codes[1])
 background(ax[0,2], country_codes[2])
@@ -85,11 +81,11 @@ ax[2,2].grid(False)
 ax[2,2].set_xticks([])
 ax[2,2].set_yticks([])
 
-fig.get_axes()
-
-
 plt.tight_layout()
+plt.subplots_adjust(right=0.75)
 
-
+plots = plot1+plot2+plot3+plot4+plot5+plot6+plot7+plot8
+labels = [plot.get_label() for plot in plots]
+plt.legend(plots, labels, loc='center left', bbox_to_anchor=(1.05, 1.7), title='Country')
 
 save_plot('5a')
