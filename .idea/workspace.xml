@@ -31,28 +31,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.plot_5d">
-    <configuration name="plot_4c" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mimuw_2019s_dav_hw4" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_4c.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.plot_5e">
     <configuration name="plot_5a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mimuw_2019s_dav_hw4" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,13 +116,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="plot_5e" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mimuw_2019s_dav_hw4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_5e.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot_5e" />
         <item itemvalue="Python.plot_5d" />
         <item itemvalue="Python.plot_5c" />
         <item itemvalue="Python.plot_5b" />
         <item itemvalue="Python.plot_5a" />
-        <item itemvalue="Python.plot_4c" />
       </list>
     </recent_temporary>
   </component>
@@ -161,22 +161,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="220" key="GridCell.Tab.0.bottom" timestamp="1586555219180">
+    <state width="1417" height="219" key="GridCell.Tab.0.bottom" timestamp="1586558843763">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586555219180" />
-    <state width="1419" height="220" key="GridCell.Tab.0.center" timestamp="1586555219178">
+    <state width="1417" height="219" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586558843763" />
+    <state width="1417" height="219" key="GridCell.Tab.0.center" timestamp="1586558843761">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586555219178" />
-    <state width="1419" height="220" key="GridCell.Tab.0.left" timestamp="1586555219177">
+    <state width="1417" height="219" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586558843761" />
+    <state width="1417" height="219" key="GridCell.Tab.0.left" timestamp="1586558843759">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586555219177" />
-    <state width="1419" height="220" key="GridCell.Tab.0.right" timestamp="1586555219179">
+    <state width="1417" height="219" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586558843759" />
+    <state width="1417" height="219" key="GridCell.Tab.0.right" timestamp="1586558843762">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="220" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586555219179" />
+    <state width="1417" height="219" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586558843762" />
     <state x="377" y="32" key="SettingsEditor" timestamp="1586454398238">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
