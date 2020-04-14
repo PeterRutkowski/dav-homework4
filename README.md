@@ -189,7 +189,7 @@ task3a, task3b, task3c,
 task4a, task4b, task4c,
 task5a, task5b, task5c, task5d, task5e (one final plot)
 
-As you can see there will be (at least) 12 scripts and 12 plots. Many scripts will 
+As you can see there will be (at least) 15 scripts and 15 plots. Many scripts will 
 share code, thus it might be worth moving some redundant code to separate *.py 
 module (e.g. utils.py). 
 Additionally, organise the project directory into subdirectories
